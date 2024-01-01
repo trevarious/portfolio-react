@@ -10,16 +10,27 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
         setLoading(true);
         setCurrentContent(content);
     };
+    const handleButtonClick = (e) => {
+        const sparkle = document.createElement('span');
+        sparkle.className = 'sparkle';
+        sparkle.style.top = `${e.clientY - e.target.getBoundingClientRect().top}px`;
+        sparkle.style.left = `${e.clientX - e.target.getBoundingClientRect().left}px`;
+        e.currentTarget.appendChild(sparkle);
+
+        setTimeout(() => {
+            sparkle.remove();
+        }, 1000);
+    };
 
     return (
         <div className="left-nav-container">
             <a id='logo' href="./" target="#"><img id="logo"  src={logo} alt="logo"/></a>
 
             <div class="links-container">
-            <div class="links">
-                    <button onClick={() => handleClick('about')}>About</button>
-                    <button onClick={() => handleClick('projects')}>Projects</button>
-                    <button onClick={() => handleClick('contact')}>Contact</button>
+            <div class="links-middle">
+                    <button onClick={() => handleClick('about')} onMouseDown={handleButtonClick} >About</button>
+                    <button id='projects' onClick={() => handleClick('projects')} onMouseDown={handleButtonClick} >Projects</button>
+                    <button onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >Contact</button>
                 </div>
                 <div id="left-nav-two" class="links">
                     <a href="https://github.com/trevarious" target="_blank">
