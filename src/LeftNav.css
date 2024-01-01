@@ -32,14 +32,29 @@
 .left-nav-links-img {
     width: 46.37px;
 }
+button {
+    background: rgb(150, 150, 150);
+    color: rgb(208, 208, 208);
+    padding: 10px;
+    display: flex;
+    flex: 1;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 17.71px;
+
+}
 @media screen and (max-width: 425px) {
     .left-nav-container {
-        width: 46.37px;
+        width: 50px;
         height: 100vh;
         background:  rgb(208, 208, 208);
     }
     #logo {
-        width: 28.65px;
+        width: 40px;
     }
 
     .links {
@@ -47,12 +62,21 @@
     }
     
     .left-nav-links-img {
-        width: 30px;
+        width: 40px;
     }
 
       
     .globe-container {
         display: none;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        padding: 20px;
+        border: none;
+        font-size: 9px;
+        font-weight: 700;
     }
 
 }
