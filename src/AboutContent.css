@@ -1,0 +1,162 @@
+/* Global styles */
+.about-content {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    height: 100vh;
+}
+
+img {
+    width: 25px;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Skill section */
+.skill {
+    background: rgb(212,212,212);
+    background: radial-gradient(circle, rgba(212,212,212,1) 0%, rgba(215,215,215,1) 100%);
+    /* border-radius: 8px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex; /* Utilize flexbox for responsive alignment */
+    flex-direction: column; /* Align content vertically */
+    gap: 15px; /* Spacing between elements */
+}
+
+h3 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Vertically center the icon and text */
+}
+
+h3 svg {
+    margin-right: 10px;
+    fill: #007bff;
+    width: 20px;
+    height: 20px;
+}
+
+h3:hover {
+    color: #0044cc;
+}
+
+p {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+span:hover {
+    color: #0044cc;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Pseudo-element for h3 */
+h3::after {
+    content: "#";
+    font-weight: 700;
+    font-size: 20px;
+    color: #007bff;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+    transition: opacity 0.15s ease-in-out;
+    opacity: 0;
+}
+
+h3:hover::after {
+    opacity: 1;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 425px) {
+    .about-content {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .skill {
+        background: rgb(230,230,230);
+        background: radial-gradient(circle, rgba(230,230,230,1) 2%, rgba(231,231,231,1) 52%, rgba(237,242,242,1) 93%);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    h3 {
+        color: #007bff;
+        font-size: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h3:hover {
+        color: #0044cc;
+    }
+
+    h3 svg {
+        margin-right: 10px;
+        fill: #007bff;
+    }
+
+    p {
+        color: #444;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    span {
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    span:hover {
+        color: #0044cc;
+        cursor: pointer;
+    }
+
+    .skill-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .skill-link:hover {
+        text-decoration: underline;
+    }
+    img {
+        width: 50px;
+    }
+}
+
