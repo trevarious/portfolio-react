@@ -23,7 +23,7 @@ export default function ProjectsContent() {
             title: 'Crypto Scope', 
             description: 'A crypto search interface allowing users to quickly search crypto assets and display its price and a chart. Intended to display asynchronous JavaScript skills as well as API data fetching and manipulation of data to display to UI.', 
             techStack: 'JavaScript, Google Charts, CSS, HTML', 
-            website: 'https://example-project2.com' 
+            website: 'https://trevarious.github.io/Crypto-Scope/' 
         },
         { 
             id: 3, 
