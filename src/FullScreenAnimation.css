@@ -64,6 +64,7 @@
     .full-screen-animation h1 {
 
         font-size: 25px;
+        max-width: 100px;
     }
 
 }
