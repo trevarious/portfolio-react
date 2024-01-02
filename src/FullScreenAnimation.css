@@ -61,5 +61,9 @@
         animation: changeHue 10s infinite alternate linear; /* Animation for hue change */
         
     }
+    .full-screen-animation h1 {
+
+        font-size: 25px;
+    }
 
 }
