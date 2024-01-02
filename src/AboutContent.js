@@ -10,7 +10,7 @@ export default function AboutContent() {
             <h2>About Me</h2>
             <div className='skill' id='frontend'>
                 <h3>
-                    <img src={frontendImage} alt="Front-end Development" /> 
+                    <img className='about-img' src={frontendImage} alt="Front-end Development" /> 
                     <a href='#frontend-link'>Front-end Development</a>
                 </h3>
                 <p>
@@ -19,7 +19,7 @@ export default function AboutContent() {
             </div>
             <div className='skill' id='blockchain'>
                 <h3>
-                    <img src={blockchainImage} alt="Blockchain Technology" /> 
+                    <img className='about-img'  src={blockchainImage} alt="Blockchain Technology" /> 
                     <a href='https://www.soliditylang.org' target='_blank' rel='noreferrer'>Blockchain Technology</a>
                 </h3>
                     <p>
@@ -29,7 +29,7 @@ export default function AboutContent() {
             </div>
             <div className='skill' id='chainlink'>
                 <h3>
-                    <img src={chainlinkImage} alt="Data Integration with Chainlink" /> 
+                    <img className='about-img' src={chainlinkImage} alt="Data Integration with Chainlink" /> 
                     <a href='https://www.chain.link' target='_blank' rel='noreferrer'>Data Integration with Chainlink</a>
                 </h3>
                 <p>

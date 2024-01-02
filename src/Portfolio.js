@@ -3,6 +3,7 @@ import React from 'react';
 import AboutContent from './AboutContent';
 import ProjectsContent from './ProjectsContent';
 import ContactContent from './ContactContent';
+import FullScreenAnimation from './FullScreenAnimation'
 import Loading from './Loading';
 import './Portfolio.css';
 
@@ -17,6 +18,7 @@ export default function Portfolio({ currentContent, loading }) {
                         {currentContent === 'about' && <AboutContent />}
                         {currentContent === 'projects' && <ProjectsContent />}
                         {currentContent === 'contact' && <ContactContent />}
+                        {currentContent === null && <FullScreenAnimation />} 
                     </>
                 )}
             </div>

@@ -3,6 +3,7 @@ import React from "react";
 import './LeftNav.css';
 import gitHub from '../src/assets/left-nav-git-link.svg';
 import insta from '../src/assets/left-nav-insta-link.svg';
+import linkedin from '../src/assets/linkedin-icon.svg';
 import logo from '../src/assets/logo.png';
 
 export default function LeftNav({ setCurrentContent, setLoading }) {
@@ -10,6 +11,7 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
         setLoading(true);
         setCurrentContent(content);
     };
+
     const handleButtonClick = (e) => {
         const sparkle = document.createElement('span');
         sparkle.className = 'sparkle';
@@ -24,14 +26,21 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
 
     return (
         <div className="left-nav-container">
-            <a id='logo' href="./" target="#"><img id="logo"  src={logo} alt="logo"/></a>
+            <a id='logo' href="./" ><img id="logo"  src={logo} alt="logo"/></a>
 
             <div class="links-container">
             <div class="links-middle">
-                    <button onClick={() => handleClick('about')} onMouseDown={handleButtonClick} >About</button>
-                    <button id='projects' onClick={() => handleClick('projects')} onMouseDown={handleButtonClick} >Projects</button>
-                    <button onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >Contact</button>
+                    <button className="left-nav-btn" onClick={() => handleClick('about')} onMouseDown={handleButtonClick} >About</button>
+                    <button className="left-nav-btn" id='projects' onClick={() => handleClick('projects')} onMouseDown={handleButtonClick} >Projects</button>
+                    <button className="left-nav-btn" onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >Contact</button>
                 </div>
+
+                <div id="left-nav-one" class="links">
+                    <a href="https://www.linkedin.com/in/trevor-sykes-717585136/" target="_blank">
+                        <img class="left-nav-links-img" src={linkedin} alt="" />
+                    </a>
+                </div>
+
                 <div id="left-nav-two" class="links">
                     <a href="https://github.com/trevarious" target="_blank">
                         <img class="left-nav-links-img" src={gitHub} alt="" />
