@@ -140,7 +140,7 @@
     }
     
     .left-nav-links-img {
-        width: 35px;
+        width: 30px;
     }
 
       
@@ -162,7 +162,9 @@
     #projects {
         font-size: 6.5px;
         letter-spacing: -0.1px;
+    }
 
-        
+    .links-middle {
+      padding: 100px;
     }
 }
