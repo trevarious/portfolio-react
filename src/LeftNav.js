@@ -42,8 +42,10 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
                         <span class="tooltip">Projects</span> {/* Tooltip text */}    
                     </button>
                     <button id='contact' className="left-nav-btn" onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >
+                        <a href='mailto:trevorjacobsykes@gmail.com' target='_blank' rel="nonreferrer" >
                         <img class="left-nav-links-img-middle" src={contact} alt='' />
-                        <span class="tooltip">Contact</span> {/* Tooltip text */}    
+                        <span class="tooltip">Contact</span> {/* Tooltip text */}  
+                        </a>  
                     </button>
                 </div>
 
@@ -56,11 +58,6 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
                 <div id="left-nav-two" class="links">
                     <a href="https://github.com/trevarious" target="_blank">
                         <img class="left-nav-links-img" src={gitHub} alt="" />
-                    </a>
-                </div>
-                <div id="left-nav-three" class="links">
-                    <a href="mailto:trevorjacobsykes@gmail.com">
-                        <img id='mail' class="left-nav-links-img" src={insta} alt="" />
                     </a>
                 </div>
             </div>
