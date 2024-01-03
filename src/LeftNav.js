@@ -5,6 +5,9 @@ import gitHub from '../src/assets/left-nav-git-link.svg';
 import insta from '../src/assets/left-nav-insta-link.svg';
 import linkedin from '../src/assets/linkedin-icon.svg';
 import logo from '../src/assets/logo.png';
+import about from '../src/assets/left-nav-about.svg';
+import projects from '../src/assets/left-nav-projects.svg';
+import contact from '../src/assets/left-nav-contact.svg';
 
 export default function LeftNav({ setCurrentContent, setLoading }) {
     const handleClick = (content) => {
@@ -30,9 +33,18 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
 
             <div class="links-container">
             <div class="links-middle">
-                    <button className="left-nav-btn" onClick={() => handleClick('about')} onMouseDown={handleButtonClick} >About</button>
-                    <button className="left-nav-btn" onClick={() => handleClick('projects')} onMouseDown={handleButtonClick} >Works</button>
-                    <button id='contact' className="left-nav-btn" onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >Talk</button>
+                    <button className="left-nav-btn" onClick={() => handleClick('about')} onMouseDown={handleButtonClick} >
+                        <img class="left-nav-links-img-middle" src={about} alt='' />
+                        <span class="tooltip">About</span> {/* Tooltip text */}    
+                    </button>
+                    <button className="left-nav-btn" onClick={() => handleClick('projects')} onMouseDown={handleButtonClick} >
+                        <img class="left-nav-links-img-middle" src={projects} alt='' />
+                        <span class="tooltip">Projects</span> {/* Tooltip text */}    
+                    </button>
+                    <button id='contact' className="left-nav-btn" onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >
+                        <img class="left-nav-links-img-middle" src={contact} alt='' />
+                        <span class="tooltip">Contact</span> {/* Tooltip text */}    
+                    </button>
                 </div>
 
                 <div id="left-nav-one" class="links">
@@ -48,7 +60,7 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
                 </div>
                 <div id="left-nav-three" class="links">
                     <a href="mailto:trevorjacobsykes@gmail.com">
-                        <img class="left-nav-links-img" src={insta} alt="" />
+                        <img id='mail' class="left-nav-links-img" src={insta} alt="" />
                     </a>
                 </div>
             </div>

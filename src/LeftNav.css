@@ -40,20 +40,29 @@
 }
 
 .left-nav-links-img {
-    width: 38.62px;
+    width: 40px;
+    border-radius: 50%;
 }
+.left-nav-links-img:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+#mail {
+  border-radius: 10px 0 10px 0;
+}
+
+
 /* Styling for a sophisticated button */
 
 .left-nav-btn {
     /* Basic appearance */
-    background: rgb(187, 187, 187);
+    background: transparent;
     color: rgb(230, 230, 230);
     padding: 10px;
     display: flex;
     flex: 1;
     width: 60px;
-    height: 30px;
-    border: 1px solid rgb(187, 187, 187) ;
+    height: 60px;
+    border: none;
     box-shadow: none;
     align-items: center;
     justify-content: center;
@@ -66,7 +75,7 @@
     font-weight: 700;
   
     /* Transition effects */
-    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background .1s ease-in;
     position: relative;
     overflow: hidden;
   }
@@ -74,29 +83,18 @@
   /* Pseudo-element for button hover effect */
     .left-nav-btn::before {
     content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
     background: rgba(208, 208, 208, .2);
     transition: all 0.45s ease;
     border-radius: 50%;
     z-index: 0;
-    transform: translate(-50%, -50%) scale(0);
   }
   
   /* Hover effect for the pseudo-element */
-  .left-nav-btn:hover::before {
-    transform: translate(-50%, -50%) scale(1);
-  }
+
   
   /* Hover effect for the button */
   .left-nav-btn:hover {
-    color: rgb(255, 255, 255);
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 1px 2px 5px 1px rgb(0, 123, 255);
-    border: none;
+    background: rgba(255, 255, 255, 0.75);
   }
   .left-nav-btn:active::after {
     content: '';
@@ -109,7 +107,6 @@
     pointer-events: none;
   }
   .left-nav-btn:active{
-    box-shadow: 1px 2px 3px 1px rgb(0, 123, 255);
   }
 
   @keyframes spark {
@@ -141,6 +138,10 @@
     .left-nav-links-img {
         width: 30px;
     }
+    .left-nav-links-img-middle {
+      width: 30px;
+      border-radius: none ;
+  }
 
       
     .globe-container {
@@ -148,9 +149,9 @@
     }
 
     .left-nav-btn {
-        width: 45px;
-        height: 30px;
-        padding: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 0;
         border: none;
         font-size: 11px;
         font-weight: 700;
@@ -164,4 +165,18 @@
       font-size: 11px;
       letter-spacing: -0.5px;
     }
+}
+
+/* Updated Tooltip styles */
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute; /* Positioning relative to the document body */
+  z-index: 1000; /* Ensure it's above other elements */
+  /* Adjust top, left, or right properties to position the tooltips */
 }
