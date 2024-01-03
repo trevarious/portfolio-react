@@ -33,7 +33,7 @@ h2 {
 }
 
 h3 {
-    color: rgb(0, 123, 255);
+    color: #007bff;
     font-size: 24px;
     margin-bottom: 10px;
     transition: color 0.3s ease-in-out;

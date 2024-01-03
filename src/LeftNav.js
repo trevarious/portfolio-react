@@ -31,8 +31,8 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
             <div class="links-container">
             <div class="links-middle">
                     <button className="left-nav-btn" onClick={() => handleClick('about')} onMouseDown={handleButtonClick} >About</button>
-                    <button className="left-nav-btn" id='projects' onClick={() => handleClick('projects')} onMouseDown={handleButtonClick} >Works</button>
-                    <button className="left-nav-btn" onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >Contact</button>
+                    <button className="left-nav-btn" onClick={() => handleClick('projects')} onMouseDown={handleButtonClick} >Works</button>
+                    <button id='contact' className="left-nav-btn" onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >Talk</button>
                 </div>
 
                 <div id="left-nav-one" class="links">
