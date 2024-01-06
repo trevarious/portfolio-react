@@ -8,3 +8,103 @@ body{
   background: #d0d0d0;
   color: black;
 }
+p {
+  color: #444;
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 700;
+}
+
+span {
+  font-weight: bold;
+  letter-spacing: .25px;
+  color: #007bff;
+}
+h3 {
+  color: #007bff;
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Vertically center the icon and text */
+}
+h3:hover {
+  color: #0044cc;
+}
+
+
+span:hover {
+  color: #0044cc;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Pseudo-element for h3 */
+h3::after {
+  content: "#";
+  font-weight: 700;
+  font-size: 20px;
+  color: #007bff;
+  margin-left: 5px;
+  position: relative;
+  top: -1px;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 0;
+}
+
+h3:hover::after {
+  opacity: 1;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 425px) {
+  h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+  }
+  h3 {
+      color: #007bff;
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  h3:hover {
+      color: #0044cc;
+  }
+
+  h3 svg {
+      margin-right: 10px;
+      fill: #007bff;
+  }
+
+  p {
+      color: #444;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 0;
+  }
+
+  span {
+      font-weight: bold;
+      color: #007bff;
+  }
+
+  span:hover {
+      color: #0044cc;
+      cursor: pointer;
+  }
+}

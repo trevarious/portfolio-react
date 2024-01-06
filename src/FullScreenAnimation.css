@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(0, 123, 255, .2) 100%);
+    background: linear-gradient(90deg, rgba(44, 77, 112, 0.1) 100%, rgb(255, 255, 255) 0%);
     font-family: 'Arial', sans-serif;
     text-align: center;
     overflow: hidden;
@@ -43,6 +43,7 @@
     animation: zoomIn 2s ease-in-out forwards;
     color: rgb(45, 45, 45);
     font-size: 40px;
+    max-width: 400px;
 }
 
 @media screen and (max-width: 425px) {
@@ -53,7 +54,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(360deg, rgba(0, 123, 255, .5) 1%, rgba(0, 123, 255, .2));
+        background: linear-gradient(90deg, rgba(44, 77, 112, 0.1) 100%, rgb(255, 255, 255) 0%);
         font-family: 'Arial', sans-serif;
         text-align: center;
         overflow: hidden;
@@ -62,9 +63,8 @@
         
     }
     .full-screen-animation h1 {
-
-        font-size: 25px;
-        max-width: 100px;
+        max-width: 200px;
+        
     }
-
+    
 }

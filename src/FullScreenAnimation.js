@@ -5,7 +5,7 @@ import './FullScreenAnimation.css';
 export default function FullScreenAnimation() {
     return (
         <div className="full-screen-animation">
-            <h1>Welcome To My Portfolio</h1>
+            <h1>welcome to my portfolio</h1>
         </div>
     );
 };

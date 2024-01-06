@@ -1,24 +1,19 @@
 // LeftNav.js
-import React from "react";
+import React, { useState } from "react";
 import './LeftNav.css';
 import logo from '../src/assets/logo.png';
 
 export default function LeftNav({ setCurrentContent, setLoading }) {
+    const [activeLink, setActiveLink] = useState('');
+
     const handleClick = (content) => {
         setLoading(true);
         setCurrentContent(content);
+        setActiveLink(content);
     };
 
     const handleButtonClick = (e) => {
-        const sparkle = document.createElement('span');
-        sparkle.className = 'sparkle';
-        sparkle.style.top = `${e.clientY - e.target.getBoundingClientRect().top}px`;
-        sparkle.style.left = `${e.clientX - e.target.getBoundingClientRect().left}px`;
-        e.currentTarget.appendChild(sparkle);
 
-        setTimeout(() => {
-            sparkle.remove();
-        }, 1000);
     };
 
     return (
@@ -27,10 +22,10 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
 
             <div class="links-container">
             <div class="links-middle">
-                    <div class="links" onClick={() => handleClick('about')} onMouseDown={handleButtonClick} >
+                    <div className='links' onClick={() => handleClick('about')} onMouseDown={handleButtonClick} >
                     <a href="#about" class="about-button">
         <svg className="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C8.14 2 5 5.13 5 9c0 2.1 1.2 4.1 3 5.39V19h8v-4.61c1.8-1.29 3-3.29 3-5.39 0-3.87-3.14-7-7-7zM12 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            <path fill={activeLink === 'about' ? 'rgb(0, 125, 255' : 'rgb(90, 90, 90)'} d="M12 2C8.14 2 5 5.13 5 9c0 2.1 1.2 4.1 3 5.39V19h8v-4.61c1.8-1.29 3-3.29 3-5.39 0-3.87-3.14-7-7-7zM12 4c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
         </svg>
         About
     </a>  
@@ -38,7 +33,7 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
                     <div class='links' onClick={() => handleClick('projects')} onMouseDown={handleButtonClick} >
                     <a href="#projects" class="projects-button">
         <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 2h5l2 2h9a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1h2zm8 2h4v2h-4V4zM4 8h16v10H4V8z"/>
+            <path fill={activeLink === 'projects' ? 'rgb(0, 125, 255' : 'rgb(90, 90, 90)'} d="M6 2h5l2 2h9a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1h2zm8 2h4v2h-4V4zM4 8h16v10H4V8z"/>
         </svg>
         Projects
     </a>
@@ -46,7 +41,7 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
                     <div class='links'  onClick={() => handleClick('contact')} onMouseDown={handleButtonClick} >
                     <a href="#contact" class="contact-button">
     <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21 6H3a2 2 0 00-2 2v10a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-1.143 1.143L12 11.486 4.143 7.143h15.714zM3.5 8.8l7.9 4.95a.5.5 0 00.6 0l7.9-4.95V17H3.5V8.8z"/>
+        <path fill={activeLink === 'contact' ? 'rgb(0, 125, 255' : 'rgb(90, 90, 90)'}  d="M21 6H3a2 2 0 00-2 2v10a2 2 0 002 2h18a2 2 0 002-2V8a2 2 0 00-2-2zm-1.143 1.143L12 11.486 4.143 7.143h15.714zM3.5 8.8l7.9 4.95a.5.5 0 00.6 0l7.9-4.95V17H3.5V8.8z"/>
     </svg>
     Contact
 </a>
@@ -56,7 +51,7 @@ export default function LeftNav({ setCurrentContent, setLoading }) {
                 <div id="left-nav-one" class="links">
                 <a href="YOUR_LINKEDIN_PROFILE_URL" class="linkedin-button">
     <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#007bff" d="M20.5 0h-17C1.121 0 0 1.121 0 2.5v17C0 21.879 1.121 23 2.5 23h17c1.379 0 2.5-1.121 2.5-2.5v-17C23 1.121 21.879 0 20.5 0zM7 18H4v-9h3v9zm-1.5-10.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM19 18h-3v-4.785c0-1.192-.024-2.715-1.758-2.715-1.76 0-2.031 1.373-2.031 2.793V18h-3v-9h2.955v1.482h.045c.409-.775 1.41-1.592 2.91-1.592 3.102 0 3.678 2.042 3.678 4.695V18z"/>
+        <path  d="M20.5 0h-17C1.121 0 0 1.121 0 2.5v17C0 21.879 1.121 23 2.5 23h17c1.379 0 2.5-1.121 2.5-2.5v-17C23 1.121 21.879 0 20.5 0zM7 18H4v-9h3v9zm-1.5-10.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM19 18h-3v-4.785c0-1.192-.024-2.715-1.758-2.715-1.76 0-2.031 1.373-2.031 2.793V18h-3v-9h2.955v1.482h.045c.409-.775 1.41-1.592 2.91-1.592 3.102 0 3.678 2.042 3.678 4.695V18z"/>
     </svg>
     LinkedIn
 </a>
